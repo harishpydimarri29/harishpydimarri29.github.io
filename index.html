@@ -1,12 +1,59 @@
 ﻿<!DOCTYPE html>
 <html>
-  <head>
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">	
+
+<head>
+    <title>Harish weds Subbu</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  </head>
-  <body>
-	MainPage
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        body {
+            background-image: url("assets/memphis-colorful.png");
+            background-repeat: repeat;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3 class="header center"> <i>
+            Harish
+            <img height="13%" width="13%" src="assets/gold-heart-link.png" />
+            Subbu</i>
+    </h3>
+    <div class="carousel" id="mainPhotoCarousel"> </div>
+
+    <script>
+
+        function constructCarousel() {
+            let imgURLS = [
+                'garland.jpeg',
+                'perk.jpeg',
+                'pose1.jpeg',
+                'pose1-min.png',
+                'pose1.png',
+                'pose2.jpeg'
+            ];
+            let cont = []; imgURLS.forEach(imageUrl => {
+                cont.push('<a class="carousel-item"><img src="assets/engphotos/' + imageUrl + '"></a>');
+            });
+
+            document.getElementById('mainPhotoCarousel').innerHTML = cont.join('');
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            constructCarousel();
+            var elems = document.querySelectorAll('.carousel');
+            var instances = M.Carousel.init(elems, {});
+            elems.forEach(carous => {
+                setInterval(() => {
+                    M.Carousel.getInstance(carous).next();
+                }, 2500);
+            });
+        });
+    </script>
+</body>
+
 </html>
