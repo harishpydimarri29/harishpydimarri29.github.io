@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Harish weds Subbu</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        .txtWhite {
+            color: white;
+        }
+        .bigNumber {
+            font-size: 50px; 
+            color: brown;
+        }
+
+        body {
+            /* background-image: url("assets/symphony.png");
+            background-repeat: repeat;
+            background-attachment: fixed; */
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h3 class="center txtWhite"> <i>
+            Harish
+            <img height="13%" width="13%" src="assets/gold-heart-link.png" />
+            Subbu</i>
+    </h3>
+    <p class="center txtWhite">
+        <a class="btn-floating white pulse"><i class="material-icons"><span style="color: #e73c7e;">favorite</span></i></a> <br> <br>
+        <b>Wedding Invitation<br>
+             To all family members and friends</b>
+    </p>
+    <div class="container center">
+        <div class="carousel carousel-slider" id="mainPhotoCarousel"> </div>
+    </div>
+
+    <br><br><br><br>
+
+    <h5 class="center txtWhite">Events</h5> <br>
+    <div class="row container">
+        <!-- Card 1 -->
+        <div class="col l4 s12">
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="assets/engagement-cropped.png">
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4">
+                        Engagement
+                        <i class="material-icons right">more_vert</i></span>
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">
+                        Engagement<i class="material-icons right">close</i>
+                    </span>
+                    <p>
+                        Morning
+                    </p>
+                    <div class="bigNumber">
+                        11 AUG
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col l4 s12">
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="assets/reception.jpg">
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4">
+                        Reception
+                        <i class="material-icons right">more_vert</i></span>
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">
+                        Reception<i class="material-icons right">close</i>
+                    </span>
+                    <p>
+                        Evening
+                    </p>
+                    <div class="bigNumber">
+                        25 AUG
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col l4 s12">
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="assets/wedding.png">
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4">
+                        Wedding
+                        <i class="material-icons right">more_vert</i></span>
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">
+                        Wedding<i class="material-icons right">close</i>
+                    </span>
+                    <p>
+                        Morning
+                    </p>
+                    <div class="bigNumber">
+                        26 AUG
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h5 class="center txtWhite">Venue</h5> <br>
+
+    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7694.045104817933!2d78.91905392521383!3d15.375264902124917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb4e5e0f980c227%3A0x8a788c43657244de!2sCHITHIRALA%20VENKATESHWARLU%20CENTRAL%20AC%20FUNCTION%20HALL!5e0!3m2!1sen!2sin!4v1628936207309!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+
+    <footer class="page-footer pink lighten-1">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Yours</h5>
+                    <p class="grey-text text-lighten-4">
+                        Harish & Subbu
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2021 Copyright
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="animCircles"></div>
+
+    <script>
+
+        function constructCarousel() {
+            let imgURLS = [
+                'garland.jpeg',
+                'perk.jpeg',
+                'pose1-min.png',
+                'pose2.jpeg'
+            ];
+            let cont = []; imgURLS.forEach(imageUrl => {
+                cont.push('<a class="carousel-item"><img style="height: 100%; width: 100%;" src="assets/engphotos/' + imageUrl + '"></a>');
+            });
+
+            document.getElementById('mainPhotoCarousel').innerHTML = cont.join('');
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            constructCarousel();
+            var elems = document.querySelectorAll('.carousel');
+            var instances = M.Carousel.init(elems, {
+                fullWidth: true
+            });
+            elems.forEach(carous => {
+                setInterval(() => {
+                    M.Carousel.getInstance(carous).next();
+                }, 4000);
+            });
+        });
+    </script>
+</body>
+
+</html>
